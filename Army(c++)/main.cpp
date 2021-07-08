@@ -40,14 +40,16 @@ int main() {
 
 	// barbarian->swichTo();
 
-	nec->magicAttack(dale, HELLFIRE);
+	// nec->magicAttack(dale, HELLFIRE);
 	// nec->attack(dale);
 
 	// std::cout << std::endl;
-	warl->magicAttack(nec, HELLFIRE);
+	// warl->magicAttack(nec, HELLFIRE);
 	nec->magicAttack(warl, HELLFIRE);
 	nec->attack(warl);
 	dale->attack(warl);
+	// nec->attack(warl);
+	// nec->attack(dale);
 	// std::cout << std::endl;
 	// std::cout << *warl << std::endl;
 	// warl->healHealth(faith, HEAL);

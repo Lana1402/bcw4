@@ -1,6 +1,5 @@
 package Magic;
 
-import Basic.Unit;
 import Basic.*;
 import State.*;
 import EnumID.*;
@@ -19,7 +18,6 @@ public class Spell {
     public void mAttack(Unit enemy, SpellCaster magician) throws UnitIsDeadException, MagicManaOffException {
         magician.getHealth().ensureIsAlive();
         magician.getMagicPower().ensureHaveIsMana();
-        enemy.getHealth().ensureIsAlive();
         
         if ( magician.getMagicPower().getMana() < manaCost) {
             System.out.println("Not enough mana!");

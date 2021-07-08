@@ -31,7 +31,6 @@ public class Attack {
     }
     public void counterAttack(Unit enemy) throws UnitIsDeadException {
         if ( thisUnit.getHealth().getHitPoints() == 0 ) {
-            enemy.notifyObserver();
             return;
         }
         if ( thisUnit.getWarriorID() == WarriorID.VAMPIRE ) {
@@ -41,5 +40,7 @@ public class Attack {
         } else {
             enemy.getHealth().takeDamage(thisUnit.getHealth().getDamage()/2);
         }
+        
+        enemy.notifyObserver();
     }
 }

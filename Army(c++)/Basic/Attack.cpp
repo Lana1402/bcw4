@@ -26,7 +26,6 @@ void Attack::attack(Unit* enemy) {
 
 void Attack::counterAttack(Unit* enemy) {
     if ( thisUnit->getHealth().getHitPoints() == 0 ) {
-        enemy->notify();
         return;
     }
 
@@ -37,4 +36,5 @@ void Attack::counterAttack(Unit* enemy) {
     } else {
         enemy->getHealth().takeDamage(this->thisUnit->getHealth().getDamage()/2);
     }
+    enemy->notify();
 }

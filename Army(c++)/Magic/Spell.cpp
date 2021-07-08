@@ -7,7 +7,6 @@ Spell::~Spell() {}
 void Spell::mAttack(Unit* enemy, SpellCaster* magician) {
     magician->getHealth().ensureIsAlive();
     magician->getMagicPower().ensureHaveIsMana();
-    enemy->getHealth().ensureIsAlive();
     
     if ( magician->getMagicPower().getMana() < this->manaCost) {
         std::cout << "Not enough mana!" << std::endl;

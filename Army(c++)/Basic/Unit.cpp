@@ -39,7 +39,6 @@ void Unit::transitionTo(State* state) {
 }
 
 void Unit::attach(IObserver* observer) {
-    std::cout << "attach" << std::endl;
     this->observer = observer;
 }
 
